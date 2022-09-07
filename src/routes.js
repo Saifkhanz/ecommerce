@@ -6,6 +6,7 @@ import productList from "./components/productList.vue";
 import accountsPage from "./components/accountsPage.vue";
 import cartPage from './components/cartPage.vue';
 import ordersPage from './components/ordersPage.vue';
+import productCard from './components/productCard.vue';
 import { createRouter, createWebHistory } from "vue-router";
 
 const routes = [
@@ -45,9 +46,15 @@ const routes = [
     path:"/cartpage"
    },
     {
-       name:'Orders',
+       name:'ordersPage ',
         component:ordersPage,
-        path:'/orderspage'
+        path:'/ordersPage',
+        props:true
+    },
+    {
+      name:"ProductCard",
+      component:productCard,
+      path:'/productcard:item'
     }
   ];
 const router = createRouter({ 

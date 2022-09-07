@@ -42,7 +42,7 @@
           <router-link 
             to="/cartpage" 
             class="bg-purple-600 text-gray-50 hover:bg-purple-700 p-3 px-5 rounded-full font-semibold"
-            >Carts
+            >Carts 
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -187,9 +187,10 @@
 
 <script>
 //  import cartPage from './cartPage.vue'
+// import { mapState } from "vuex";
 import mensCart from "./mensCart.vue";
 import WomensCart from "./womensCart.vue";
-
+   
 // import axios from "axios";
 // import ProductList from "./productList.vue";
 export default {
@@ -215,7 +216,9 @@ export default {
       localStorage.clear();
       this.$router.push({ name: "Login" });
     },
-  
+    // computed:{
+    //  ...mapState(["counter"])
+    // },
        getItem()
       { 
         fetch('https://fakestoreapi.com/products')

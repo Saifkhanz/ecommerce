@@ -1,17 +1,16 @@
 <template>
   <div>
    <router-view></router-view>
-
+    <!-- <FakePage /> -->
     <!-- <SignupPage /> -->
   </div>
 </template>
 
 <script>
-// import SignupPage from './components/SignupPage.vue';
-
+// import FakePage from './components/fakePage.vue';
 export default {
     name: "App",
-   
+    // components: { FakePage }
 };
 </script>
 
