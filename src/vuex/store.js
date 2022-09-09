@@ -1,4 +1,4 @@
-
+/*
 import { createStore } from "vuex";
 export default createStore({
     state(){
@@ -16,7 +16,7 @@ export default createStore({
       },  
          })
 
-
+   */
 
 
 
@@ -52,24 +52,27 @@ export default createStore({
 })
 */
 
-/*
-important  data 
+import { createStore } from "vuex";
+// import Vue from "vue";
+// import Vuex from "vuex";
 
-import Vue from "vue";
-import Vuex from "vuex";
-
-Vue.use(Vuex);
+// Vue.use(Vuex);
 
 export default createStore({
   
   state: {
     product: [],
+    cart:"online Kaka"
   },
   
   mutations: {
     setData(state, product) {
       state.product = product;
     },
+    setCart(state,payload)
+    {
+     state.cart= payload;
+    }
   },
   
   actions: {
@@ -81,17 +84,23 @@ export default createStore({
         })
         .catch((err) => console.error(err));
     },
+    addItem(context,payload){
+          context.commit("setCart",payload)
+      }
   },
   
   getters: {
     product(state) {
       return state.product;
     },
+    showData(state){
+        return state.cart
+      }
   },
   
 });
   
-*/
+
 
 
 
