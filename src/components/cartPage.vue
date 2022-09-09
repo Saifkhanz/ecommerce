@@ -85,7 +85,7 @@
     </div>
     <div class="mt-5">
       <ul v-for="data in temp" :key="data.id">
-              
+               
               <div class="grid grid-flow-row grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10">
               <li >
                 <div class="shadow-lg rounded-lg ">
@@ -154,6 +154,7 @@
 </template>
 
 <script>
+  //  import { mapState } from 'vuex';
 export default {
 name:"cartPage",
   data()
